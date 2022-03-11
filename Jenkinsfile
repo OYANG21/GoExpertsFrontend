@@ -11,7 +11,6 @@ pipeline {
                 // Get source code from a GitHub repository
                 git branch:'main', url:'https://github.com/OYANG21/GoExpertsFrontend'
             }
-        }
         
         stage('npm install') {
             steps{
@@ -22,13 +21,6 @@ pipeline {
                 }
             }
         }
-        
-      
-
-        post {
-            always { 
-                echo 'I will always say Hello again!'
-            }
-        }
-    }
+    
+      }
 }
