@@ -13,9 +13,10 @@ pipeline {
         stage('npm install') {
             steps{
                 // install dependence
-                dir("/var/jenkins_home/workspace/goexperts") {
-                    sh 'npm install'
-                }
+                //dir("/var/jenkins_home/workspace/goexperts") {
+                    //sh 'npm install'
+                //}
+                sh 'node --version'
             }
         }
     
