@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    
     stages {
         stage('Git checkout') {
             steps{
@@ -14,7 +15,7 @@ pipeline {
                 //dir("./") {
                 //    sh 'npm install'
                     sh 'echo hello'
-                }
+                //}
             }
         }
     
