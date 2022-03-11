@@ -4,7 +4,7 @@ Repo for GoExperts frontend sources without a pipeline. You need to construct a 
 2. *DO NOT* operate on the `main` branch directly. Checkout your own branch instead, e.g. feature/new_pipeline
 3. Compose your pipeline file and put them into `cicd`
 4. Build up a pipeline on cicd platforms like Jenkins, Travis CI, Github Actions and have a test.
-
+...
 
 <h1>P3项目开展建议</h1>
 
