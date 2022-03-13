@@ -20,5 +20,11 @@ pipeline {
                 }
             }
         }
+        
+        stage('npm build') {
+            steps {
+                sh 'npm build'
+            }
+        }
     }
 }
