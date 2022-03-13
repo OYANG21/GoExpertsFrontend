@@ -16,14 +16,15 @@ pipeline {
             steps {
                 dir("./") {
                     sh 'npm install'
-                    sh 'pwd'
                 }
             }
         }
         
         stage('npm build') {
             steps {
-                sh 'npm run build'
+                dir("./") {
+                    sh 'npm run build'
+                }
             }
         }
     }
