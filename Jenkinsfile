@@ -4,11 +4,20 @@ pipeline {
         docker { image 'node:14-alpine'}
     }
     stages {
-        stage('Test') {
+        stage('Git checkout') {
             steps {
-                sh 'node --version'
-                sh 'docker --version'
+                // Get source code from a GitHub repository
+                git branch:'main', url:'https://github.com/Azure-Samples/openhack-devops-team.git'
                 
+            }
+        }
+        
+        stage('npm install'){
+            steps {
+                dir("./") {
+                    sh 'npm install'
+                    sh 'pwd'
+                }
             }
         }
     }
