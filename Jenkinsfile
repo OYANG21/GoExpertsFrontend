@@ -27,5 +27,13 @@ pipeline {
                 }
             }
         }
+        
+        stage('syn s3') {
+            steps {
+                dir("./") {
+                    sh 'aws s3 sync build s3://goexperts'
+                }
+            }
+        }
     }
 }
