@@ -35,7 +35,7 @@ pipeline {
                     // sh 'aws s3 sync build s3://goexperts'
                     pwd();
                     withAWS(region:'ap-southeast-2', credentials:'818255485773'){
-                        def identity=awsIdentity();
+                        // def identity=awsIdentity();
                         s3Upload(bucket:"goexperts", workingDir:'dist', includePathPattern:'**/*');
                     }
                 }
