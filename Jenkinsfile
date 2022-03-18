@@ -12,6 +12,7 @@ pipeline {
             }
         }
         
+        
         stage('npm install'){
             steps {
                 dir("./") {
